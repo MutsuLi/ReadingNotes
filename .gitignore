@@ -1,0 +1,7 @@
+# file 
+
+# User-specific files
+*.hdev
+*.docx
+*.pdf
+.vscode/
