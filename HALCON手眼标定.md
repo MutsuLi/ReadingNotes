@@ -15,7 +15,7 @@
 
 #### 3.2.1 公式
 
-$$ ^{com}H_{cal} (1) =^{com}H_{base} (2)* ^{base}H_{tool} (3)* ^{tool}H_{cal}(4)$$
+$$ ^{cam}H_{cal} (1) =^{cam}H_{base} (2)* ^{base}H_{tool} (3)* ^{tool}H_{cal}(4)$$
 
 * 上式中H表示齐次变换矩阵
 * 上式中已知量为
@@ -40,7 +40,7 @@ $$ ^{com}H_{cal} (1) =^{com}H_{base} (2)* ^{base}H_{tool} (3)* ^{tool}H_{cal}(4)
 
 #### 3.3.1 公式
 
-$$ ^{com}H_{cal} (1) =^{com}H_{tool} (2)* ^{tool}H_{base} (3)* ^{base}H_{cal}(4)$$
+$$ ^{cam}H_{cal} (1) =^{cam}H_{tool} (2)* ^{tool}H_{base} (3)* ^{base}H_{cal}(4)$$
 
 * 上式中H表示齐次变换矩阵
 * 上式中已知量为
@@ -221,7 +221,7 @@ $$ R_{zyz} =R_{z} (Rl)* R_{y} (Rm)*R_{z}(Rr)$$
 
 * 获取机器人基座坐标系中校正对象的位姿
 
-  > pose_compose (CamInBasePose, ObjInCamPose, ObjInBasePose)
+  > pose_campose (CamInBasePose, ObjInCamPose, ObjInBasePose)
 
 ## 5.  六轴关节机器人手眼标定之目标抓取
 
@@ -229,9 +229,9 @@ $$ R_{zyz} =R_{z} (Rl)* R_{y} (Rm)*R_{z}(Rr)$$
 
   $$ ^{base}H_{obj} =^{base}H_{cam}*^{cam}H_{obj}$$
 
-### 5.2 Eye-To-Hand(相机固定)
+### 5.2 Eye-To-Hand(相机移动)
 
-  $$ ^{base}H_{obj} =^{base}H_{cam}(acq*pos.)*^{tool}H_{cam}*^{cam}H_{obj} $$
+  $$ ^{base}H_{obj} =^{base}H_{tool}(acq*pos.)*^{tool}H_{cam}*^{cam}H_{obj} $$
 
 ### 5.3 本例思路
 
